@@ -20,10 +20,10 @@ node{
         */
         //docker.withRegistry( 'https://registry.hub.docker.com', 'DockerHubPassword' ) {
              
-        withCredentials([string(credentialsId: 'docker-pwd', variable: 'DockerHubPwd')]) {
+       /* withCredentials([string(credentialsId: 'docker-pwd', variable: 'DockerHubPwd')]) {
       
             
-}    
+}   */ 
          sh 'sudo docker login -u "aarchana" -p "DockerHubPwd" docker.io'
         sh 'sudo docker push aarchana/job1_web2.0'
              //sh 'sudo docker push upasanatestdocker/mysql'
